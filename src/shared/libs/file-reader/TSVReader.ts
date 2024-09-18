@@ -17,7 +17,7 @@ export class TSVReader {
     return this.rawData.split('\n')
     .filter(row => row.trim().length > 0)
     .map(line => line.split('\t'))
-    .map(([title, description, createdData, image, type, price, category, firstname, lastname, email, avatar]) => ({
+    .map(([title, description, createdData, image, type, price, category, firstname, lastname, email, avatarPath]) => ({
       title,
       description,
       postDate: new Date(createdData),
@@ -29,7 +29,7 @@ export class TSVReader {
         firstname,
         lastname,
         email,
-        avatar
+        avatarPath
       }
     }))
   }
