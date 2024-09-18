@@ -1,6 +1,6 @@
 type ParsedCommand = Record<string, string[]>
 
-class CommandParser {
+export class CommandParser {
   static parse(args: string[]): ParsedCommand {
     const parsed: ParsedCommand = {}
     let currentCommand = '';
