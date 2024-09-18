@@ -1,14 +1,13 @@
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
-import { Command } from "./command.interface.js";
+
+import { Command } from "./command.interface.js"
 
 export class ImportCommand implements Command {
+  private : string = '';
   constructor(
-    private readonly filePath: string = './package.json'
   ) {};
 
   public getName(): string {
-    return '--import';
+    return '--import'
   }
 
   public async execute(..._params: string[]):Promise<void> {
